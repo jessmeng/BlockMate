@@ -6,13 +6,116 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ToggleButton
+        android:id="@+id/location"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="60dp"
+        android:text="ToggleButton8"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/location5"
+        app:layout_constraintTop_toBottomOf="@+id/location6" />
+
+    <ToggleButton
+        android:id="@+id/location5"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="60dp"
+        android:text="ToggleButton7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location7" />
+
+    <ToggleButton
+        android:id="@+id/location6"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="5dp"
+        android:text="ToggleButton6"
+        app:layout_constraintBottom_toTopOf="@+id/location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/location7"
+        app:layout_constraintTop_toBottomOf="@+id/location4" />
+
+    <ToggleButton
+        android:id="@+id/location7"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="ToggleButton5"
+        app:layout_constraintBottom_toTopOf="@+id/location5"
+        app:layout_constraintEnd_toStartOf="@+id/location6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location3" />
+
+    <ToggleButton
+        android:id="@+id/location1"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="ToggleButton1"
+        app:layout_constraintBottom_toTopOf="@+id/location3"
+        app:layout_constraintEnd_toStartOf="@+id/location2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/location2"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="5dp"
+        android:text="ToggleButton2"
+        app:layout_constraintBottom_toTopOf="@+id/location4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/location1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/location3"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="ToggleButton3"
+        app:layout_constraintBottom_toTopOf="@+id/location7"
+        app:layout_constraintEnd_toStartOf="@+id/location4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location1" />
+
+    <ToggleButton
+        android:id="@+id/location4"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="5dp"
+        android:text="ToggleButton4"
+        app:layout_constraintBottom_toTopOf="@+id/location6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/location3"
+        app:layout_constraintTop_toBottomOf="@+id/location2" />
 
 </android.support.constraint.ConstraintLayout>
