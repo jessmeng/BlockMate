@@ -21,13 +21,11 @@ public class ActivitySell extends AppCompatActivity {
                 final EditText name = findViewById(R.id.nameText);
                 final EditText blocks = findViewById(R.id.blocksText);
                 final EditText cost = findViewById(R.id.costText);
-                final EditText date = findViewById(R.id.dateText);
                 final EditText time = findViewById(R.id.timeText);
 
                 String nameVal = name.getText().toString();
                 String blocksVal = blocks.getText().toString();
                 String costVal = cost.getText().toString();
-                String dateVal = date.getText().toString();
                 String timeVal = time.getText().toString();
 
                 //Call some function
