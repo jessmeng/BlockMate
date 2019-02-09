@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "334372847451",
+    "firebase_url": "https://blockmate-bdb3c.firebaseio.com",
+    "project_id": "blockmate-bdb3c",
+    "storage_bucket": "blockmate-bdb3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334372847451:android:58dcafcbf2c1b18d",
+        "android_client_info": {
+          "package_name": "com.example.blockmate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334372847451-4fkcl4nepbimh8kqb2n07j9ma2tfbdpg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.blockmate",
+            "certificate_hash": "be9762aeda7537e0ce951b8d54823969521867f5"
+          }
+        },
+        {
+          "client_id": "334372847451-onsktsghb24o4gehij9r5d1eo6v4tlb6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGG-WOO_C6bqaT-dY3Yum3xCYuEfOchTo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334372847451-onsktsghb24o4gehij9r5d1eo6v4tlb6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
