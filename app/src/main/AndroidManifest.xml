@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityBuy"></activity>
+        <activity android:name=".SubmitActivity"></activity>
+        <activity android:name=".ActivityBuy" />
         <activity android:name=".ActivitySell" />
         <activity android:name=".MainActivity">
             <intent-filter>
