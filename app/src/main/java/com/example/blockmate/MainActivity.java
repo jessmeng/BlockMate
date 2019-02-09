@@ -14,7 +14,8 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.iid.FirebaseInstanceIdReceiver;
+import java.util.Map;
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -23,25 +24,23 @@ public class MainActivity extends AppCompatActivity {
 //    Context context;
     private FirebaseOptions.Builder builder;
     private FirebaseOptions options;
-
-    // public FirebaseDatabase dataBase;
-    // public DatabaseReference mRef;
+    public DatabaseReference myRef;
+    public FirebaseDatabase dataBase;
+    // Map<String, List> val = new Map();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        builder = new FirebaseOptions.Builder();
-        builder.setApiKey("AIzaSyDjiOg_OVDKPVF0i2x29f-ikpiljiH9Vf0");
-        builder.setApplicationId("blockmate-bdb3c");
-        builder.setDatabaseUrl("https://blockmate-bdb3c.firebaseio.com/");
-        FirebaseOptions options = builder.build();
-        FirebaseApp.initializeApp(this, options);
+//        builder = new FirebaseOptions.Builder();
+//        builder.setApiKey("AIzaSyDjiOg_OVDKPVF0i2x29f-ikpiljiH9Vf0");
+//        builder.setApplicationId("blockmate-bdb3c");
+//        builder.setDatabaseUrl("https://blockmate-bdb3c.firebaseio.com/");
+//        options = builder.build();
 
-        FirebaseDatabase dataBase = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = dataBase.getReference("message");
-        myRef.setValue("Hello, World!");
-        Log.d("DEBUG", "onCreate: created msg");
+//        FirebaseApp.initializeApp(this, options);
+
+//        dataBase = FirebaseDatabase.getInstance();
 
         toolbar = getSupportActionBar();
         BottomNavigationView navigation = findViewById(R.id.navigationView);
@@ -50,11 +49,11 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.navigation_buy:
-                        Intent a = new Intent(MainActivity.this,ActivityBuy.class);
+                        Intent a = new Intent(MainActivity.this, ActivityBuy.class);
                         startActivity(a);
                         break;
                     case R.id.navigation_sell:
-                        Intent b = new Intent(MainActivity.this,ActivitySell.class);
+                        Intent b = new Intent(MainActivity.this, ActivitySell.class);
                         startActivity(b);
                         break;
                 }
