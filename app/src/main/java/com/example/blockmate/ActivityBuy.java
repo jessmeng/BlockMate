@@ -4,7 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
+import android.view.View;
+import android.graphics.Color;
 
 public class ActivityBuy extends AppCompatActivity {
 
@@ -33,10 +34,12 @@ public class ActivityBuy extends AppCompatActivity {
 
         for (int i = 0; i < temp.length; i++) {
             if (commonLocs(locations, temp[i].locations)) {
+
                 TextView displaytext = new TextView(this);
                 displaytext.setText(textarray[i]);
                 displaytext.setPadding(20, 50, 20, 50);
                 displaytext.setTextSize((float) 18);
+                displaytext.setBackgroundColor(Color.parseColor("#FFCCCC"));
                 linearlayout.addView(displaytext);
 
             }
