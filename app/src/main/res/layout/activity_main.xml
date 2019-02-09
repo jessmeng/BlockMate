@@ -6,61 +6,62 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ToggleButton
-        android:id="@+id/location"
-        android:layout_width="0dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="60dp"
-        android:text="ToggleButton8"
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:background="?android:attr/windowBackground"
+        app:itemBackground="@color/colorPrimary"
+        app:itemTextColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/location5"
-        app:layout_constraintTop_toBottomOf="@+id/location6" />
-
-    <ToggleButton
-        android:id="@+id/location5"
-        android:layout_width="0dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="60dp"
-        android:text="ToggleButton7"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/location"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/location7" />
+        app:menu="@menu/navigation" />
 
-    <ToggleButton
-        android:id="@+id/location6"
+    <ImageView
+        android:id="@+id/logo"
         android:layout_width="0dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="5dp"
-        android:text="ToggleButton6"
-        app:layout_constraintBottom_toTopOf="@+id/location"
+        android:layout_height="62dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/location7"
-        app:layout_constraintTop_toBottomOf="@+id/location4" />
-
-    <ToggleButton
-        android:id="@+id/location7"
-        android:layout_width="0dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="5dp"
-        android:text="ToggleButton5"
-        app:layout_constraintBottom_toTopOf="@+id/location5"
-        app:layout_constraintEnd_toStartOf="@+id/location6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/location3" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/buy"
+        android:layout_width="55dp"
+        android:layout_height="27dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="668dp"
+        android:elevation="10dp"
+        android:src="@drawable/buy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/sell"
+        android:layout_width="53dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="668dp"
+        android:elevation="10dp"
+        android:src="@drawable/sell"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.734"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ToggleButton
         android:id="@+id/location1"
@@ -69,10 +70,11 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="90dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="5dp"
         android:text="ToggleButton1"
+        android:textOff="Cohon UC"
         app:layout_constraintBottom_toTopOf="@+id/location3"
         app:layout_constraintEnd_toStartOf="@+id/location2"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -83,8 +85,8 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="90dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="5dp"
         android:text="ToggleButton2"
+        android:textOff="Gates"
         app:layout_constraintBottom_toTopOf="@+id/location4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/location1"
@@ -95,12 +97,12 @@
         android:layout_width="0dp"
         android:layout_height="140dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="5dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="5dp"
         android:text="ToggleButton3"
+        android:textOff="Newell-Simon"
         app:layout_constraintBottom_toTopOf="@+id/location7"
         app:layout_constraintEnd_toStartOf="@+id/location4"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/location1" />
 
@@ -109,13 +111,78 @@
         android:layout_width="0dp"
         android:layout_height="140dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="5dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="5dp"
         android:text="ToggleButton4"
+        android:textOff="Morewood"
         app:layout_constraintBottom_toTopOf="@+id/location6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/location3"
         app:layout_constraintTop_toBottomOf="@+id/location2" />
+
+    <ToggleButton
+        android:id="@+id/location7"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="15dp"
+        android:text="ToggleButton5"
+        android:textOff="Posner"
+        app:layout_constraintBottom_toTopOf="@+id/location5"
+        app:layout_constraintEnd_toStartOf="@+id/location6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location3" />
+
+    <ToggleButton
+        android:id="@+id/location6"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="30dp"
+        android:text="ToggleButton6"
+        android:textOff="Scott"
+        app:layout_constraintBottom_toTopOf="@+id/location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/location7"
+        app:layout_constraintTop_toBottomOf="@+id/location4" />
+
+    <ToggleButton
+        android:id="@+id/location5"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="15dp"
+        android:text="ToggleButton7"
+        android:textOff="Resnik"
+        app:layout_constraintEnd_toStartOf="@+id/location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location7" />
+
+    <ToggleButton
+        android:id="@+id/location"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="30dp"
+        android:text="ToggleButton8"
+        android:textOff="Tepper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/location5"
+        app:layout_constraintTop_toBottomOf="@+id/location6" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Select your Dining Location(s):"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
 
 </android.support.constraint.ConstraintLayout>
